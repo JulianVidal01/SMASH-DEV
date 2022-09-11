@@ -1,0 +1,459 @@
+:root{
+    --primario: #2cd0c5;
+    --primariOscuro: #0c7e76;
+    --secundario: #000000;
+    --secundariOscuro: rgb(233,287,2);
+    --blanco: #FFF;
+    --negro: #000;
+
+    --fuentePrincipal: 'Staatliches', cursive;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+a{
+    text-decoration: none;
+    color: var(--blanco);
+    font-family: Arial, Helvetica, sans-serif;
+}
+img{
+    width: 100%;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+    justify-content: center;
+}
+h1,h2,h3{
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.2rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+
+/** Header **/
+.header{
+    display: flex;
+    justify-content: left;
+    margin-left: 7rem;
+}
+.header__h1{
+    font-family: var(--fuentePrincipal);
+    font-size: 6rem;
+}
+.header__sm{
+    display: flex;
+    justify-content: left;
+    margin-left: 1rem;
+}
+.header__h3{
+    font-family: var(--fuentePrincipal);
+    font-size: 3rem;
+}
+/** Footer **/
+.footer{
+    background-color: var(--primariOscuro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer__texto{
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+/** Grid **/
+
+ .grid{
+    display: grid;
+    grid-template-columns: repeat(1);
+    gap: 2rem;
+}
+@media (min-width: 768px){ /*Visual para pantallas normales*/
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.gridProduct{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px){
+    .gridProduct{
+        display: grid;
+        grid-template-columns: repeat(100%);
+    }
+}
+
+.project__imagen{
+    display: block;
+    margin: auto;
+    width: 70%;
+}
+
+.project--Contenido p{
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 2.5rem;
+}
+
+/** personas **/
+
+.persona{
+    background-color: var(--primariOscuro);
+    padding: 1rem;
+    border: var(--negro) 3px solid;
+}
+.persona__nombre{
+    font-size: 4rem;
+}
+.persona__informacion{
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+.persona__nombre,
+.persona__informacion{
+    font-family: var(--fuentePrincipal);
+    margin: 1rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.persona__imagen{
+    display: block;
+    margin: auto;
+    width: 30%;
+    border: 2px solid var(--negro);
+    border-radius: 80px;
+}
+
+.persona__contenido h2{
+    font-size: 2.8rem;
+    text-align: left;
+}
+
+/** Pagina de MODEL**/
+
+.pers{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    height: 20%;
+}
+@media (min-width: 768px) {
+    .pers{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+.persona__Imagen{
+    grid-row: 1 / 2;
+}
+@media (min-width: 768px) {
+    .persona__Imagen{
+        grid-column: 2 / 3;
+    }
+}
+
+.persona__imagenm{
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+.personam{
+    background-color: var(--primariOscuro);
+    padding: 2rem;
+    height: 100%;
+    border: var(--negro) 3px solid;
+}
+
+
+/* Proyectos */
+
+.Project{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: .5rem var(--negro) solid;
+    column-gap: 2rem;
+    background-color: var(--primariOscuro);
+}
+
+.Project--Imagen{
+    grid-row: 1 / 2;
+    margin: 3rem 3rem 3rem 3rem;
+    border-radius: 80px;
+    border: .5rem var(--negro) solid;
+    background-color: var(--primario);
+}
+@media (min-width: 768px) {
+    .Project--Imagen{
+        grid-column: 1 / 2;
+    }
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+
+.myBtn{
+    color: var(--blanco);
+    background-color: var(--primariOscuro);
+    font-family: var(--fuentePrincipal);
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    width: 120px;
+    font-size: 2rem;
+    margin-left: 70%;
+    transform: translateX(-50%);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 75%;
+    height: 85%;
+}
+  
+  /* The Close Button */
+.close1,.close2,.close3,.close4,.close5{
+    color: #000000;
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+    font-weight: 100;
+}
+  
+.close1:hover,.close2:hover,.close3:hover,.close4:hover,.close5:hover
+  .close1:focus,.close2:focus,.close3:focus,.close4:focus,.close5:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /** slides **/
+
+/* Slideshow container team*/
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* PROD */
+
+.slideshow-containerproduct {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlidesProduct {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prevProduct, .nextProduct {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .nextProduct {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prevProduct:hover, .nextProduct:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Fading animation */
+  .fade-product {
+    animation-name: fadep;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fadep {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  /* Sections */
+
+  /* Style the buttons that are used to open and close the accordion panel */
+  /* .accordion {
+    background-color: var(--primariOscuro);
+    color: var(--negro);
+    cursor: pointer;
+    padding: 18px;
+    text-align: left;
+    font-family: var(--fuentePrincipal);
+    font-size: 10rem;
+    border: 2px var(--negro) solid;
+    outline: none;
+    align-items: right;
+    margin-bottom: 2rem;
+    font-size: 15px;
+    transition: 0.4s;
+    width: 100%;
+    font-size: 2rem;
+    transform: translateX(-50%);
+  } */
+
+  .accordion {
+    background-color: var(--primariOscuro);
+    color: var(--negro);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: 2px var(--negro) solid;
+    outline: none;
+    transition: 0.4s;
+    text-align: left;
+    font-family: var(--fuentePrincipal);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    transform: translateX(1%);
+  }
+  
+  .active{
+    background-color: var(--blanco); 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+  }
+
+  .mas{
+    width: 25px;
+    text-align: left;
+  }
